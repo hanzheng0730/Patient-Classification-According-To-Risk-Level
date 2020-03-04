@@ -4,10 +4,11 @@ The dataset includes the information of patients who went through different surg
 ## Models selected
 LogisticRegression, RandomForest, XGBoost, LightGBM
 ## Accuracy
-
+![Image description](https://github.com/hanzheng0730/Patient-Classification-According-To-Risk-Level/blob/master/AUCComp.jpg)
 LightGBM has the highest AUC for both train set and test set. And the model is neither overfit nor underfit. So we focus on this model and proceed with the deployment analysis.
 ## Deployment Stratery
 Below is the histogram showing the distribution of the Predicted Probability which is labeled as “PredProb” in this study.
+![Image description](https://github.com/hanzheng0730/Patient-Classification-According-To-Risk-Level/blob/master/Bins.jpg)
 The patients were sorted by the predited probability. Then we splited the patients into three bins using pd.qcut(df['PredProb'], 3, labels=["low", "medium", "high"]) so that each bin has the same number of people (~26666). We labeled the bins as "low", "medium", "high".
 The first bin is labled "low" that indicates this group of people have low risk to have "status=1". The predited probability is in the range of 0.0055 to 0.3899. The true-positive rate for this bin is 2.72% which is low. So we would like to say our model predicts very well for the low risk people.
 The middle bin is labled "medium" that indicates this group of people are not very sure of being positive or negative. The predited probability is in the range of 0.3899 to 0.7144. The true-positive rate for this bin is 15.2%. That indicates the people in this bin is mostly negative.
