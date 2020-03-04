@@ -4,6 +4,7 @@ The dataset includes the information of patients who went through different surg
 ## Models selected
 LogisticRegression, RandomForest, XGBoost, LightGBM
 ## Accuracy
+
 LightGBM has the highest AUC for both train set and test set. And the model is neither overfit nor underfit. So we focus on this model and proceed with the deployment analysis.
 ## Deployment Stratery
 Below is the histogram showing the distribution of the Predicted Probability which is labeled as “PredProb” in this study.
