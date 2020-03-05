@@ -1,6 +1,6 @@
 # Patient-Classification-According-To-Risk-Level
 ## Dataset
-The dataset includes the information of patients who went through different surgical procedures. In order to properly use the hospital resources, the length-of-stay (LOS) of each patient needs to be predicted based on the known information like surgical area, age, all blood test results and etc. LOS of >5 is labeled as 1 while LOS of <=5 is labeled as 0.
+The dataset includes the information of patients who went through different surgical procedures. In order to properly use the hospital resources, the length-of-stay (LOS) of each patient needs to be predicted based on the known information like surgical area, age, all blood test results and etc. In the training dataset, LOS of >5 is labeled as 1 while LOS of <=5 is labeled as 0. The LOS of new patients has to be predicted and the accuracy of different models are discussed. This dataset has 292 features originally and feature selection using different techniques have been tried.
 ## Models selected
 LogisticRegression, RandomForest, XGBoost, LightGBM
 ## Accuracy
